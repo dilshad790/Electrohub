@@ -1,74 +1,79 @@
 # ElectroHub: Omni-Channel Retail Sales & Inventory Intelligence
 
 ## 📌 Project Overview
-**ElectroHub** is a data-driven intelligence project designed for a diverse retail store managing categories ranging from **Electronics and Footwear to Home Appliances and Personal Care**. The goal of this dashboard is to provide stakeholders with a 360-degree view of sales performance, profitability, and inventory health to optimize supply chain decisions and marketing strategies.
+**ElectroHub** is a data-driven intelligence project designed for a diverse retail store managing categories ranging from **Electronics and Footwear to Home Appliances and Personal Care**. This dashboard provides a 360-degree view of sales performance, profitability, and inventory health to optimize supply chain decisions and marketing strategies.
 
-### 🎯 Business Objectives
-Based on the project requirements, the dashboard answers the following critical business questions:
-1.  **Performance Benchmarking:** Identification of the Top 5 and Bottom 5 products based on Sales, Profit, and Quantity Sold.
-2.  **Temporal Analysis:** Visualizing how sales trends fluctuate across daily, monthly, quarterly, and annual timeframes.
-3.  **Profitability Correlation:** Examining the relationship between Sales and Profit to identify high-margin vs. high-volume drivers.
-4.  **Geographic Distribution:** Mapping sales performance across various cities to pinpoint market penetration.
-5.  **Promotion Impact:** Analyzing the average discount offered per category and its effect on total order volume.
+### 📋 Product Categories Covered:
+- 💻 Electronics & Accessories
+- 👟 Footwear
+- 👕 Clothing
+- 🏠 Home Appliances
+- 🍳 Kitchenware
+- 💼 Bags
+- 🧴 Personal Care
 
 ---
 
 ## 🛠️ Technical Stack
 * **Data Visualization:** Power BI Desktop
 * **Data Transformation:** Power Query (M Language)
-* **Analytical Logic:** DAX (Data Analysis Expressions) for calculated measures
-* **Data Source:** Multi-category transactional dataset (Electronics, Footwear, Clothing, etc.)
+* **Analytical Logic:** DAX (Data Analysis Expressions)
+* **Data Source:** Multi-category transactional dataset
 
 ---
 
 ## 📊 Dashboard Insights & Visuals
 
-### 1. Product Performance Analysis
-This view focuses on extreme values, allowing managers to see which products are over-performing and which require stock clearance or marketing intervention.
+### 1. High-Level KPI Summary
+The "Slider for sales" page provides an immediate snapshot of the business's health using summarized metrics.
+![Sales KPIs and Sliders](Screenshots/Screenshot%202026-05-07%20214114.png)
+* **Total Sales:** 110M
+* **Total Units Sold:** 6.1K
+* **Total Orders:** 3,510 (as shown on the City Analysis page)
 
-![Top and Bottom Product Performance Analysis](Screenshot%202026-05-07%20214031.png)
+### 2. Time-Period Comparison & Filtering
+One of the core features is the ability to compare performance between two distinct periods using the **Date Slider**.
+![Interactive Filter Features](Screenshots/Screenshot%202026-05-07%20214129.png)
+* **Dynamic Range:** Users can select any two dates to compare Sales, Profit, and Quantity Sold.
+* **Granular Drill-Down:** The "Filter Features" page provides a row-level transaction table including:
+    - CustomerID, Product ID, and PromotionID
+    - Discount Percentage & Value
+    - Net Sales vs. Total Sales (calculating the impact of discounts)
 
-* **Insight:** The **Apple iPhone** dominates both total sales and profit, while low-ticket items like **Colgate** represent the bottom tier of revenue generation.
+### 3. Product Performance Analysis (Top/Bottom 5)
+Focuses on identifying extreme performers to assist in procurement and clearance strategies.
+![Top and Bottom Performance](Screenshots/Screenshot%202026-05-07%20214031.png)
+* **Insights:** Tracks Top/Bottom 5 by **Sales**, **Profit**, and **Units Sold** simultaneously.
 
-### 2. Market Geography & Profitability Correlation
-By utilizing scatter plots and map visuals, we can identify which regions are profitable and if sales volume consistently leads to profit.
+### 4. Sales vs. Profit & Geographic Penetration
+A multi-dimensional view of where the money is coming from and if volume equals value.
+![City Analysis & Profitability](Screenshots/Screenshot%202026-05-07%20214102.png)
+* **Map Visual:** Pinpoints sales in cities like Delhi, Mumbai, Kanpur, and Bangalore.
+* **Scatter Plot:** Analyzes the relationship between Net Sales and Profit to find high-margin outliers.
+* **Category Discounts:** A bar chart displaying the **Average Discount** per product to ensure promotions aren't hurting the bottom line.
 
-![Sales vs Profit and Geographic Distribution](Screenshot%202026-05-07%20214102.jpg)
-
-* **Key KPI:** Successfully tracked **3,510 total orders** with a clear concentration of revenue in major urban hubs like Delhi and Mumbai.
-* **Discount Strategy:** High-value items like the **Apple MacBook** and **Sony Bravia** carry the highest average discounts to drive competitive edge.
-
-### 3. Sales Trend Intelligence
-A line-chart analysis showing the "heartbeat" of the business throughout the fiscal year.
-
-![Sales Trends by Month](Screenshot%202026-05-07%20214041.png)
-
-* **Observation:** Significant sales peaks are observed in **October and November**, likely correlating with seasonal festive demand.
-
-### 4. Dynamic Filtering & Transaction Drill-Down
-To ensure the report is truly interactive, advanced slicing features were implemented to allow users to filter by specific customers, product names, or promotion IDs.
-
-![Interactive Filter Features](Screenshot%202026-05-07%20214129.png)
-
-* **Granularity:** The "Filter Features" page allows for a deep dive into individual transaction IDs, showing the exact discount percentage and net sales per line item.
+### 5. Temporal Trend Analysis
+Visualizes the "Sales heartbeat" to detect seasonal peaks.
+![Sales Trends](Screenshots/Screenshot%202026-05-07%20214041.png)
+* **Trendline:** Shows monthly fluctuations, highlighting high-demand months like October/November.
 
 ---
 
-## 🚀 Key Takeaways & Impact
-* **Inventory Optimization:** By identifying the "Bottom 5" products by unit sold, the business can reduce storage costs for slow-moving inventory.
-* **Strategic Discounting:** The correlation between "Average Discount" and "Net Sales" helps in fine-tuning promotional campaigns for underperforming categories.
-* **Regional Growth:** Geographic insights suggest potential for expansion in regions with high order counts but lower total revenue.
+## 🚀 Key Business Impact
+* **Inventory Control:** Identifying "Bottom 5" items helps reduce capital tied up in slow-moving stock.
+* **Discount Efficiency:** Evaluating Average Discount by category prevents over-discounting high-demand electronics.
+* **Regional Strategy:** Directing marketing efforts toward cities with high order counts but lower total value.
 
 ---
 
 ## 📂 Project Structure
 * `ElectroHub_Dashboard.pbix`: The core Power BI file.
 * `Data/`: Folder containing raw CSV/Excel datasets.
-* `Documentation/`: Detailed project notes and requirement sheets.
+* `screenshots/`: Folder containing all dashboard images.
 
 ---
 
 ### How to use this repository:
 1. Download the `.pbix` file.
 2. Open in **Power BI Desktop**.
-3. Use the **Navigation Pane** on the left to toggle between Analysis, Trends, and Filter features.
+3. Use the **Navigation Pane** on the left to toggle between different analysis pages.
